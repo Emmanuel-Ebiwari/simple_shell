@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+/**
+ * main - shell program
+ *
+ * @ac: argument count
+ * @av: argument vector
+ *
+ * Return: 0
+ */
 
 int main(int ac, char *av[])
 {
@@ -8,8 +16,7 @@ int main(int ac, char *av[])
 	char *line = NULL;
 	size_t len;
 
-	do 
-	{
+	do {
 		printf("my_bash$ ");
 		if (getline(&line, &len, stdin) == -1)
 		{
@@ -27,7 +34,7 @@ int main(int ac, char *av[])
 			}
 		}
 	}
-	while (1);
+	while (1)
 
 	free(line);
 	return (0);
